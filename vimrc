@@ -165,9 +165,9 @@ au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vspli
 au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
 
 " unite-grep
-nnoremap <silent> <Leader>g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> <Leader>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
-nnoremap <silent> <Leader>r  :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent> [unite]r   :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent> [unite]g   :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> [unite]cg  :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W><CR>
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
