@@ -124,6 +124,7 @@ NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'tpope/vim-surround'
 
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-dispatch'
