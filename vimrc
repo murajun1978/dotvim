@@ -69,8 +69,10 @@ set background=dark
 colorscheme solarized
 
 if &term =~ "xterm-256color" || "screen-256color"
+  let g:solarized_termcolors=256
   set t_Co=256
 else
+  let g:solarized_termcolors=16
   set t_Co=16
 endif
 " }}}
