@@ -159,6 +159,10 @@ nnoremap <silent> [unite]h :<C-u>Unite history/yank<CR>
 nnoremap <silent> [unite]d :<C-u>Unite directory_mru<CR>
 nnoremap <silent> [unite]m :<C-u>Unite buffer file_mru<CR>
 nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
+au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
+au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
 
 " unite-grep
 nnoremap <silent> <Leader>g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
