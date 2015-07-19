@@ -16,9 +16,16 @@ nnoremap <Leader>w :w<CR>
 " save and close
 nnoremap <Leader>x :x<CR>
 " quick not save
-nnoremap <Leader>q :q!<CR>
+nnoremap <Leader>q :q<CR>
 " search highlight clear
 nnoremap <Esc><Esc> :noh<CR>
+
+" search
+set incsearch
+set ignorecase
+set smartcase
+set wrapscan
+
 " }}}
 
 " Edit settings {{{
