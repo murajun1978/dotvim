@@ -176,6 +176,7 @@ autocmd BufEnter *
   \|  endif
 
 " vim-tags
+let g:vim_tags_auto_generate = 0
 let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore', '*.js']
 
 " over-vim
