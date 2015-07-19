@@ -222,6 +222,15 @@ let g:gitgutter_sign_added = '✚'
 let g:gitgutter_sign_modified = '➜'
 let g:gitgutter_sign_removed = '✘'
 
+" vim-fugitive
+nnoremap [git] <Nop>
+nmap <Leader>g [git]
+nnoremap [git]b :<C-u>Gblame<CR>
+nnoremap [git]s :<C-u>Gstatus<CR>
+nnoremap [git]d :<C-u>Gdiff<CR>
+nnoremap [git]c :<C-u>Gcommit<CR>
+nnoremap [git]C :<C-u>Gcommit -v<CR>
+
 " light-line
 let g:lightline = {
   \ 'colorscheme': 'solarized',
