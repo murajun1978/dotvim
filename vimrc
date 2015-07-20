@@ -128,6 +128,9 @@ NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-surround'
 
+" syntax check
+NeoBundle 'scrooloose/syntastic'
+
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-pathogen'
@@ -231,6 +234,18 @@ nnoremap [git]d :<C-u>Gdiff<CR>
 nnoremap [git]c :<C-u>Gcommit<CR>
 nnoremap [git]C :<C-u>Gcommit -v<CR>
 
+" syntastic
+let g:syntastic_mode_map = { 'mode': 'passive' }
+augroup AutoSyntastic
+  autocmd!
+  autocmd BufWritePost * call s:syntastic()
+augroup END
+
+function! s:syntastic()
+  SyntasticCheck
+  call lightline#update()
+endfunction
+
 " light-line
 let g:lightline = {
   \ 'colorscheme': 'solarized',
@@ -239,7 +254,18 @@ let g:lightline = {
   \   'left': [
   \     ['mode', 'paste'],
   \     ['fugitive', 'gitgutter', 'filename'],
+  \   ],
+  \   'right': [
+  \     [ 'syntastic', 'lineinfo' ],
+  \     [ 'percent' ],
+  \     [ 'fileformat', 'fileencoding', 'filetype' ],
   \   ]
+  \ },
+  \ 'component_expand': {
+  \   'syntastic': 'SyntasticStatuslineFlag',
+  \ },
+  \ 'component_type': {
+  \   'syntastic': 'error',
   \ },
   \ 'component_function': {
   \   'modified': 'MyModified',
