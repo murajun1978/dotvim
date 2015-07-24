@@ -64,6 +64,9 @@ set hlsearch
 " title
 set title
 
+" markdown
+autocmd BufRead,BufNew *.md set filetype=markdown
+
 " color {{{
 set background=dark
 colorscheme solarized
@@ -102,6 +105,7 @@ NeoBundle 'mxw/vim-jsx'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'plasticboy/vim-markdown'
 
 " git
 NeoBundle 'cohama/agit.vim'
@@ -131,6 +135,10 @@ NeoBundle 'tpope/vim-surround'
 
 " syntax check
 NeoBundle 'scrooloose/syntastic'
+
+" preview
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-dispatch'
@@ -246,6 +254,14 @@ function! s:syntastic()
   SyntasticCheck
   call lightline#update()
 endfunction
+
+" markdown syntax
+autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+let g:previm_open_cmd = ''
+nnoremap [previm] <Nop>
+nmap <Space>p [previm]
+nnoremap <silent> [previm]o :<C-u>PrevimOpen<CR>
+nnoremap <silent> [previm]r :call previm#refresh()<CR>
 
 " light-line
 let g:lightline = {
