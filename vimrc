@@ -114,6 +114,7 @@ NeoBundle 'tpope/vim-bundler'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 't9md/vim-ruby-xmpfilter'
+NeoBundle 'tpope/vim-rails'
 
 " operation
 NeoBundle 'kien/ctrlp.vim'
