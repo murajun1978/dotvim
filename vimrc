@@ -194,6 +194,18 @@ autocmd BufEnter *
   \|    nnoremap <buffer> tk :<C-u>Unite jump<CR>
   \|  endif
 
+" unite-rails
+noremap <silent> [unite]rc :<C-u>Unite rails/controller<CR>
+noremap <silent> [unite]rcf :<C-u>Unite rails/config<CR>
+noremap <silent> [unite]rm :<C-u>Unite rails/model<CR>
+noremap <silent> [unite]rv :<C-u>Unite rails/view<CR>
+noremap <silent> [unite]rh :<C-u>Unite rails/helper<CR>
+noremap <silent> [unite]rs :<C-u>Unite rails/stylesheet<CR>
+noremap <silent> [unite]rj :<C-u>Unite rails/javascript<CR>
+noremap <silent> [unite]rr :<C-u>Unite rails/route<CR>
+noremap <silent> [unite]rg :<C-u>Unite rails/gemfile<CR>
+noremap <silent> [unite]rt :<C-u>Unite rails/spec<CR>
+
 " vim-tags
 let g:vim_tags_auto_generate = 0
 let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore', '*.js']
