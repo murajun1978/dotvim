@@ -119,6 +119,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'thoughtbot/vim-rspec'
 NeoBundle 't9md/vim-ruby-xmpfilter'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'wakatime/vim-wakatime'
 
 " operation
 NeoBundle 'kien/ctrlp.vim'
