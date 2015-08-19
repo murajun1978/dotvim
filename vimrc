@@ -206,6 +206,7 @@ noremap <silent> [unite]rj :<C-u>Unite rails/javascript<CR>
 noremap <silent> [unite]rr :<C-u>Unite rails/route<CR>
 noremap <silent> [unite]rg :<C-u>Unite rails/gemfile<CR>
 noremap <silent> [unite]rt :<C-u>Unite rails/spec<CR>
+noremap <silent> [unite]rl :<C-u>Unite rails/lib<CR>
 
 " vim-tags
 let g:vim_tags_auto_generate = 0
