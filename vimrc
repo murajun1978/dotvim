@@ -8,6 +8,8 @@ set whichwrap+=h,l,<,>,[,],b,s
 " encode
 set encoding=utf-8
 
+set swapfile
+
 " clipbord
 set clipboard+=unnamed
 
@@ -70,6 +72,7 @@ autocmd BufRead,BufNew *.md set filetype=markdown
 " color {{{
 set background=dark
 colorscheme solarized
+let g:solarized_termtrans=1
 
 if &term =~ "xterm-256color" || "screen-256color"
   let g:solarized_termcolors=256
@@ -106,6 +109,7 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'elixir-lang/vim-elixir'
 
 " git
 NeoBundle 'cohama/agit.vim'
